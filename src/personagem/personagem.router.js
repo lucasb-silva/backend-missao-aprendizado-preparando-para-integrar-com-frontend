@@ -4,9 +4,9 @@ const { validateObjectId } = require('../db/database.helper')
 
 const router = express.Router()
 
-router.get('/', validateObjectId, controller.readAll)
+router.get('/', controller.readAll)
 router.get('/:id', validateObjectId, controller.readById)
-router.post('/', validateObjectId, controller.create)
+router.post('/', controller.create)
 router.put('/:id', validateObjectId, controller.updateById)
 router.delete('/:id', validateObjectId, controller.deleteById)
 
